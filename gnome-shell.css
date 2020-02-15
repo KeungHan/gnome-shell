@@ -539,12 +539,10 @@ StScrollBar {
   text-align: right;
   width: 1.2em; }
 
-/*.popup-menu-boxpointer,
-.candidate-popup-boxpointer {*/
-
-.popup-menu-boxpointer {
+.popup-menu-boxpointer,
+.candidate-popup-boxpointer {
   -arrow-border-radius: 6px;
-  -arrow-background-color: #f8f9f9;/*下拉框背景色*/
+  -arrow-background-color: #f8f9f9;
   -arrow-border-width: 1px;
   -arrow-border-color: rgba(0, 0, 0, 0.4);
   -arrow-base: 24px;
@@ -558,6 +556,11 @@ StScrollBar {
   border-color: #c5cbd0;
   border-bottom-width: 1px;
   border-bottom-style: solid; }
+
+.rename-folder-popup .rename-folder-popup-item {
+  spacing: 6px; }
+  .rename-folder-popup .rename-folder-popup-item:ltr, .rename-folder-popup .rename-folder-popup-item:rtl {
+    padding: 0, 12px; }
 
 .background-menu {
   -boxpointer-gap: 4px;
@@ -667,7 +670,7 @@ StScrollBar {
 
 .ws-switcher-active-up, .ws-switcher-active-down,
 .ws-switcher-active-left, .ws-switcher-active-right {
-  height: 50px;
+  height: 52px;
   background-color: #E95420;
   color: #ffffff;
   background-size: 32px;
@@ -940,7 +943,8 @@ StScrollBar {
 
 .calendar-today {
   font-weight: bold;
-  border: 1px solid #c5cbd0; }
+  color: #4a4a4a;
+  background-color: #eaecee; }
 
 .calendar-day-with-events {
   color: #575757;
@@ -1019,6 +1023,13 @@ StScrollBar {
   color: #242424;
   padding: 10px; }
 
+.message-close-button {
+  color: #636363; }
+  .message-close-button:hover {
+    color: #8a8a8a; }
+  .message-close-button:active {
+    color: #a3a3a3; }
+
 .message-media-control {
   padding: 12px;
   color: #636363; }
@@ -1027,9 +1038,11 @@ StScrollBar {
   .message-media-control:last-child:rtl {
     padding-left: 18px; }
   .message-media-control:hover {
-    color: #3D3D3D; }
+    color: #8a8a8a; }
+  .message-media-control:active {
+    color: #a3a3a3; }
   .message-media-control:insensitive {
-    color: black; }
+    color: #bdbdbd; }
 
 .media-message-cover-icon {
   icon-size: 48px !important; }
@@ -1072,9 +1085,7 @@ StScrollBar {
   border: 1px solid #c5cbd0; }
   .system-menu-action:hover, .system-menu-action:focus {
     background-color: rgba(61, 61, 61, 0.15);
-    color: #3D3D3D;
-    border: none;
-    padding: 14px; }
+    color: #3D3D3D; }
   .system-menu-action:active {
     background-color: rgba(61, 61, 61, 0.2);
     color: #3D3D3D; }
@@ -1701,79 +1712,40 @@ StScrollBar {
   border-color: #eb6637;
   background-color: #E95420; }
 
-/*ibus 输入法样式*/
-
-.candidate-popup-boxpointer {
-
-  -arrow-border-radius: 6px;
-  /*-arrow-background-color: rgba(68,68,68,0.9); #f8f9f9;下拉框背景色*/
-  -arrow-background-color: #f8f9f9; /*下拉框背景色*/
-  -arrow-border-width: 1px;
-  -arrow-border-color: rgba(0, 0, 0, 0.4);
-  -arrow-base: 24px;
-  -arrow-rise: 11px;
-  /*-arrow-box-shadow: 0 1px 3px #f8f9f9;*/ 
-  -arrow-box-shadow: 0 1px 3px black; 
-}
-
-
 .candidate-popup-content {
   padding: 0.5em;
-  spacing: 0.3em; 
-  color: #98A12A; /*文字颜色（提示符和候选字）*/
-  background-color: rgba(68,68,68,0.9);
-}
+  spacing: 0.3em; }
 
-/*编号样式*/
 .candidate-index {
   padding: 0 0.5em 0 0;
-  /*color: #50c4a8; */
-}
+  color: #242424; }
 
-/*候选词样式*/
 .candidate-box {
   padding: 0.3em 0.5em 0.3em 0.5em;
-  border-radius: 4px;
-  color: #63DE00;/*候选子颜色*/ 
-}
+  border-radius: 4px; }
   .candidate-box:selected, .candidate-box:hover {
-    /*background-color: #E95420;*/
-    background-color: #00BBCE;/*选中了的背景色*/
-    color: #ffffff;
- }
+    background-color: #E95420;
+    color: #ffffff; }
 
-/*上下页样式*/
- .candidate-page-button-box {
-  height: 2em; 
-}
+.candidate-page-button-box {
+  height: 2em; }
   .vertical .candidate-page-button-box {
     padding-top: 0.5em; }
   .horizontal .candidate-page-button-box {
     padding-left: 0.5em; }
 
 .candidate-page-button {
-  padding: 4px;
-  /*background-color:transparent;*/
-  /*background-color: rgba(68,68,68,0.9);*/
-}
+  padding: 4px; }
 
-.candidate-page-button-previous, .candidate-page-button-previous:insensitive {
+.candidate-page-button-previous {
   border-radius: 4px 0px 0px 4px;
-  border-right-width: 0;
-  background-color:transparent; /*设置上页案钮背景色 ,此处设置为透明，此处默认为主题button*/
- /* background-color: rgba(68,68,68,0.0);*/
- }
+  border-right-width: 0; }
 
-.candidate-page-button-next, .candidate-page-button-next:insensitive {
-  border-radius: 0px 4px 4px 0px;
-  background-color:transparent;
- /* background-color: rgba(68,68,68,0.9);*/
- }
+.candidate-page-button-next {
+  border-radius: 0px 4px 4px 0px; }
 
 .candidate-page-button-icon {
-  icon-size: 1em; 
-  color: #ffffff;
-}
+  icon-size: 1em; }
 
 /* Auth Dialogs & Screen Shield */
 .user-icon {
