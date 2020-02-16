@@ -1728,24 +1728,30 @@ StScrollBar {
     color: #ffffff; }
 
 .candidate-page-button-box {
-  height: 2em; }
+  height: 0.5em;
+}
   .vertical .candidate-page-button-box {
-    padding-top: 0.5em; }
-  .horizontal .candidate-page-button-box {
-    padding-left: 0.5em; }
-
+    padding-top: none;
+} 
+    .horizontal .candidate-page-button-box {
+    padding-left: none; 
+}
 .candidate-page-button {
-  padding: 4px; }
-
+  padding: 1px;
+  /*border: none;*/
+}
 .candidate-page-button-previous {
-  border-radius: 4px 0px 0px 4px;
-  border-right-width: 0; }
+  border-radius: 1px 0px 0px 1px;
+  border-right-width: 0;
+}
 
 .candidate-page-button-next {
-  border-radius: 0px 4px 4px 0px; }
+  border-radius: 0px 1px 1px 0px; 
+}
 
 .candidate-page-button-icon {
-  icon-size: 1em; }
+  icon-size: 0.5em;
+ }
 
 /* Auth Dialogs & Screen Shield */
 .user-icon {
